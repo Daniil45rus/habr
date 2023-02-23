@@ -6,6 +6,7 @@ import { useTheme } from 'app/providers/ThemeProvider'
 import { MainPage } from 'pages/MainPage'
 import { AboutPage } from 'pages/AboutPage'
 import { AppRouter } from './providers/router'
+import { Navbar } from 'widgets/Navbar'
 
 
 
@@ -14,13 +15,8 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
+      <Navbar/>
       <button onClick={() => switchTheme()}>Switch theme</button>
-      <Link to={'/'}>
-        Главня
-      </Link>
-      <Link to={'/about'}>
-        О сайте
-      </Link>
       <AppRouter/>
     </div>
   )
